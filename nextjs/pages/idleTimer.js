@@ -1,29 +1,31 @@
 import { useState, useEffect } from "react";
 
-const idleTimer = () => {
-    const [idleTime, timer] = useState(0)
+const idlesetTimer = () => {
+    const [idleTime, setTimer] = useState(0)
 
     useEffect(() => {
-        const interval = setInterval(() => {
-          timer(idleTime => idleTime + 1)
-        }, 1000);
+            const interval = setInterval(() => {
+                setTimer(idleTime => idleTime + 1)
+              }, 1000);
       }, []);
 
-      if(idleTime === 10) {
-        timer(idleTime = 0);
-        alert("Are you still there?")
-    }; 
-    
-// clears the timer and sets the idletimer to zero
-const clearTimer = () => {
-    timer(idleTime = 0)
+      useEffect(() => {
+        if(idleTime === 10) {
+            alert("Are you still there?")
+            setTimer(0)
+        } 
+      }, [idleTime])
+
+// clears the setTimer and sets the idlesetTimer to zero
+const clearsetTimer = () => {
+    setTimer(idleTime = 0)
 }
 
     return (
-    <div onMouseMove={clearTimer}>
+    <div onMouseMove={clearsetTimer}>
     <button><a href='/'>Home</a></button>
-    <h1>A simple idle timer</h1>
-    <p className="timertext">
+    <h1>A simple idle setTimer</h1>
+    <p className="setTimertext">
         You are idle for
         <span> {idleTime} </span>  
         </p>
@@ -32,4 +34,4 @@ const clearTimer = () => {
     )
 }
 
-export default idleTimer;
+export default idlesetTimer;
