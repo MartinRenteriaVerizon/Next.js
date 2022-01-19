@@ -13,6 +13,7 @@ export default function Home(props) {
       <button><a href='/idleTimer'>Idle Timer</a></button>
       <button><a href='/countButton'>CountButton</a></button>
       <button><a href='/searchBar'>SearchBar</a></button>
+      <button><a href="/intentToLeave">Back Alert</a></button>
     </div>
   )
 }
