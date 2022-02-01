@@ -11,8 +11,8 @@ const idlesetTimer = () => {
 
       useEffect(() => {
         if(idleTime === 10) {
-            alert("Are you still there?")
-            setTimer(0)
+            // alert("Are you still there?")
+            // setTimer(0)
         } 
       }, [idleTime])
 

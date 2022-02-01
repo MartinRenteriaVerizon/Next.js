@@ -1,4 +1,6 @@
 import '../styles/globals.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const products = [
   'tooth paste',
   'tooth brush',

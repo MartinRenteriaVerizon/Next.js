@@ -9,7 +9,7 @@ export default function Home(props) {
       
       <h1>Welcome to the home page!</h1>
       <button><a href='/aboutme'>About Me</a></button>
-      <button><a href='/advice'>Advice API Demo</a></button>
+      <button><a href='/productStore'>ProductStore API Demo</a></button>
       <button><a href='/idleTimer'>Idle Timer</a></button>
       <button><a href='/countButton'>CountButton</a></button>
       <button><a href='/searchBar'>SearchBar</a></button>

@@ -11,10 +11,16 @@ const countButton = (props) => {
     console.log("UseEffect func called")
   }, [])
 
+  const resetButton = () => {
+    setCountValue(0)
+  }
+
   return (
     <div>
       <button onClick={handleClick}>+{props.incrementBy}</button>
       <div>{countValue}</div>
+      <button variant="primary" onClick={resetButton}>Reset</button>
+      <br /><br />
       <button><a href="/">Home</a></button>
     </div>
   );
