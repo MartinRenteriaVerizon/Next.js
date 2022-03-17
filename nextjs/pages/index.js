@@ -34,6 +34,9 @@ export default function Home(props) {
       <button>
         <a href="/focus">Focus</a>
       </button>
+      <button>
+        <a href="/iframe-parent">Iframe Example</a>
+      </button>
     </div>
   );
 }
