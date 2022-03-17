@@ -31,6 +31,9 @@ export default function Home(props) {
       <button>
         <a href="/accessibility">Accessibility Demo</a>
       </button>
+      <button>
+        <a href="/focus">Focus</a>
+      </button>
     </div>
   );
 }

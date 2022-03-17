@@ -111,3 +111,11 @@ a {
 input::selection {
     border-color: green !important;
 }
+
+:focus {
+background-color: aqua;
+}
+
+.iframe {
+  border: solid 3px black;
+}
