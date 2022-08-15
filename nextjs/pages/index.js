@@ -11,7 +11,7 @@ export async function getStaticProps({locale}) {
   };
 }
 
-export default function Home(props) {
+function Home() {
   const { t } = useTranslation();
 
   return (
@@ -22,7 +22,6 @@ export default function Home(props) {
 
       <h1 style={{ textAlign: "center" }}>Welcome to the home page!</h1>
       <h1>{t("translation:welcome")}</h1>
-      <p>{props.locale}</p>
       <button>
         <a href="/aboutme">About Me</a>
       </button>
@@ -56,3 +55,5 @@ export default function Home(props) {
     </div>
   );
 }
+
+export default Home;

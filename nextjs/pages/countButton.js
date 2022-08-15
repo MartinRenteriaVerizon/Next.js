@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 const countButton = (props) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [countValue, setCountValue] = useState(0);
 
   const increase = () => {

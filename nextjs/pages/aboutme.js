@@ -1,16 +1,23 @@
-export function getStaticProps({locale}) {
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
+
+
+export async function getStaticProps({locale}) {
   return {
     props: {
-      locale
-    }
+      ...(await serverSideTranslations(locale, ["translation"])),
+    },
   }
 }
 
-function aboutme(props) {
+ function aboutme(props) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = useTranslation();
+
   return (
     <div>
       <p className="about">
-        {props.locale}
+        <h1>{t("translation:welcome")}</h1>
         Hi! My name is Martin Renteria and am an Verizon Apprentice on the
         digital marketing team!
       </p>
